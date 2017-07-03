@@ -10,9 +10,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MyController {
 
-    @GetMapping("/")
+    @GetMapping("/h")
     public String index(Model m) {
         m.addAttribute("someAttribute", "someValue1");
-        return "index";
+        return "hello";
+    }
+
+    @GetMapping("/m")
+    public String index2(Model m) {
+        m.addAttribute("someAttribute", "someValue2");
+        return "hello";
     }
 }
